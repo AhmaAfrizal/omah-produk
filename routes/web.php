@@ -18,12 +18,12 @@ Route::middleware('is_superadmin')->namespace('Superadmin')->prefix('v1/superadm
 });
 
 // is admin distributor
-Route::group(['middleware' => 'is_admindistributor','namespace' => 'Admindistributor','prefix'=>'admin_dis'], function() {
-    Route::get('home','HomeController@index')->name('admin_dist.home');
+Route::middleware('is_admindistributor')->namespace('Admindistributor')->prefix('admin_dis')->name('admindistributor.')->group(function(){
+    Route::get('home','HomeController@index')->name('home');
 });
 
 // is admin verifikator
-Route::group(['middleware' => 'is_adminverifikator','namespace' => 'AdminVerifikator','prefix'=>'admin_verif'], function() {
-    Route::get('home','HomeController@index')->name('admin_verif.home');
+Route::middleware('is_adminverifikator')->namespace('AdminVerifikator')->prefix('admin_verif')->name('adminverifikator.')->group(function(){
+    Route::get('home','HomeController@index')->name('home');
 });
 // ==============================================================
