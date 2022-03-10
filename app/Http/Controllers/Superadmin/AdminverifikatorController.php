@@ -11,7 +11,8 @@ class AdminverifikatorController extends Controller
 {
 	public function index()
 	{
-		return view('superadmin.verifikator.index');
+		$user = User::where('is_adminverifikator',1)->get();
+		return view('superadmin.verifikator.index', compact('user'));
 	}
 
 	public function store(Request $request)
