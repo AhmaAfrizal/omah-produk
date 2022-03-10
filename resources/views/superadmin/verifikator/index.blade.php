@@ -42,7 +42,7 @@
 			<div class="card">
 				<div class="card-header">Add Admin Verifikator</div>
 				<div class="card-body">
-					<table id="example" class="table table-striped table-bordered" style="width:100%">
+					<table id="idsuperadminaddverifikator" class="table table-striped table-bordered" style="width:100%">
 						<thead>
 							<tr>
 								<th>No.</th>
@@ -69,6 +69,15 @@
 							</tr>
 							@endforeach
 						</tbody>
+						<tfoot>
+							<tr>
+								<th>No.</th>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Verified at</th>
+								<th></th>
+							</tr>
+						</tfoot>
 					</table>
 				</div>
 			</div>
@@ -87,9 +96,9 @@
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
 <script>
-	$(document).ready(function () {
+	$(document).ready(function ($) {
 		$.noConflict();
-		$('#example').DataTable();
+		$('#idsuperadminaddverifikator').DataTable();
 	} );
 </script>
 @endpush
