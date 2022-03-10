@@ -12,8 +12,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // ==============================================================
 // is super admin
-Route::group(['middleware' => 'is_superadmin','namespace' => 'Superadmin','prefix'=>'v1/superadmin'], function() {
-    Route::get('home','HomeController@index')->name('super_admin.home');
+Route::middleware('is_superadmin')->namespace('Superadmin')->prefix('v1/superadmin')->name('superadmin.')->group(function(){
+    Route::get('home','HomeController@index')->name('home');
     Route::resource('admin_verifikator','AdminverifikatorController');
 });
 

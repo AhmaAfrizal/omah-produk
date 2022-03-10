@@ -29,7 +29,7 @@
 						@else
 						@if(auth()->user()->is_superadmin == 1)
 							<li class="nav-item">
-								<a class="nav-link" href="{{ route('admin_verifikator.index') }}">Admin Verifikator</a>
+								<a class="nav-link" href="{{ route('superadmin.admin_verifikator.index') }}">Admin Verifikator</a>
 							</li>
 						@elseif(auth()->user()->is_adminverifikator == 1)
 							<li class="nav-item">

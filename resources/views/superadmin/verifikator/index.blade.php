@@ -7,7 +7,7 @@
 			<div class="card">
 				<div class="card-header">Add Admin Verifikator</div>
 				<div class="card-body">
-					<form action="{{ route('admin_verifikator.store') }}" method="POST">
+					<form action="{{ route('superadmin.admin_verifikator.store') }}" method="POST">
 						@csrf
 						<div class="form-group">
 							<input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Nama">
@@ -60,16 +60,18 @@
 								<td>{{ $user->email }}</td>
 								<td>{{ $user->email_verified_at }}</td>
 								<td>
-									<form action="{{ route('admin_verifikator.destroy',$user->id) }}" method="POST">
-										<a href="#" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>@csrf
+									<form action="{{ route('superadmin.admin_verifikator.destroy',$user->id) }}" method="POST">
+										<a href="{{ route('superadmin.admin_verifikator.edit',$user->id) }}" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>@csrf
 										@method('DELETE')
 										<button type="submit" class="btn btn-danger" onclick="return confirm('Yakin mau hapus user, {{ $user->name }} ?')"><i class="fa-solid fa-trash-can"></i></button>
 									</form>
 								</td>
 							</tr>
 							@endforeach
-						</tfoot>
+						</tbody>
 					</table>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

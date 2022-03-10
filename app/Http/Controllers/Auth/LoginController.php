@@ -50,7 +50,7 @@ class LoginController extends Controller
 		if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
 		{
 			if (auth()->user()->is_superadmin == 1) {
-				return redirect()->route('super_admin.home');
+				return redirect()->route('superadmin.home');
 			}elseif(auth()->user()->is_admindistributor == 1) {
 				return redirect()->route('admin_dist.home');
 			}elseif(auth()->user()->is_adminverifikator == 1) {
