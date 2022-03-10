@@ -59,7 +59,13 @@
 								<td>{{ $user->name }}</td>
 								<td>{{ $user->email }}</td>
 								<td>{{ $user->email_verified_at }}</td>
-								<td></td>
+								<td>
+									<form action="{{ route('admin_verifikator.destroy',$user->id) }}" method="POST">
+										<a href="#" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>@csrf
+										@method('DELETE')
+										<button type="submit" class="btn btn-danger" onclick="return confirm('Yakin mau hapus user, {{ $user->name }} ?')"><i class="fa-solid fa-trash-can"></i></button>
+									</form>
+								</td>
 							</tr>
 							@endforeach
 						</tfoot>
