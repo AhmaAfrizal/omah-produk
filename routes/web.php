@@ -27,3 +27,21 @@ Route::middleware('is_adminverifikator')->namespace('AdminVerifikator')->prefix(
     Route::get('home','HomeController@index')->name('home');
 });
 // ==============================================================
+
+//================================================================
+//tambahkan produk
+Route::get('/tambahproduk', function () {
+    return view('tampilanproduk');
+});
+
+
+//tampilan produk
+Route::get('/tampilanproduk', 'ProdukController@show');
+Route::post('/add_process', 'ProdukController@add_process');
+
+//menuju web (detail produk dan tambah web)
+Route::get('/detail','ProdukController@index');
+//================================================================
+
+
+
