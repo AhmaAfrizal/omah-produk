@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/produsen', function() {
+    return view('produsen');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -26,4 +30,7 @@ Route::group(['middleware' => 'is_admindistributor','namespace' => 'Admindistrib
 Route::group(['middleware' => 'is_adminverifikator','namespace' => 'AdminVerifikator','prefix'=>'admin_verif'], function() {
     Route::get('home','HomeController@index')->name('admin_verif.home');
 });
+
+Route::get('/kontributor', 'Superadmin\ProdusenController@index')->name('kontributor');
+Route::post('/kontributor', 'Superadmin\ProdusenController@input')->name('input.kontributor');
 // ==============================================================
