@@ -33,11 +33,22 @@
 							</li>
 						@elseif(auth()->user()->is_adminverifikator == 1)
 							<li class="nav-item">
-								<a class="nav-link" href="#">coba admin verifikator</a>
+								<a class="nav-link" href="#">coba admin distributor</a>
 							</li>
 						@elseif(auth()->user()->is_admindistributor == 1)
-							<li class="nav-item">
-								<a class="nav-link" href="#">coba admin distributor</a>
+							<li class="nav-item dropdown">
+								<a id="navbarDropdown_produk" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+									Produk
+								</a>
+
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown_produk">
+									<a class="dropdown-item" href="{{ route('admindistributor.product.index') }}">
+										Produk
+									</a>
+									<a class="dropdown-item" href="{{ route('admindistributor.kategories.index') }}">
+										Kategori
+									</a>
+								</div>
 							</li>
 						@endif
 						@endguest

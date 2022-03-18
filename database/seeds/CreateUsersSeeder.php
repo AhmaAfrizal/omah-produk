@@ -25,14 +25,14 @@ class CreateUsersSeeder extends Seeder
 				'name'					=> 'Admin Verifikator',
 				'email'					=> 'adminverifikator@argiacyber.com',
 				'is_adminverifikator'	=> '1',
-				'email_verified_at' => Carbon::now(),
+				'email_verified_at' 	=> Carbon::now(),
 				'password'				=> bcrypt('12345678'),
 			],
 			[
 				'name'					=> 'Admin Distributor',
 				'email'					=> 'admindistributor@argiacyber.com',
 				'is_admindistributor'	=> '1',
-				'email_verified_at' => Carbon::now(),
+				'email_verified_at' 	=> Carbon::now(),
 				'password'				=> bcrypt('12345678'),
 			],
 			[
