@@ -1,4 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/5mhuwAcA/css/app-back.css": "/5mhuwAcA/css/app-back.css",
+    "/5mhuwAcA/js/perfect-scrollbar.js": "/5mhuwAcA/js/perfect-scrollbar.js",
+    "/5mhuwAcA/js/smooth-scrollbar.js": "/5mhuwAcA/js/smooth-scrollbar.js",
+    "/5mhuwAcA/js/chartjs.js": "/5mhuwAcA/js/chartjs.js",
+    "/5mhuwAcA/js/app-back.js": "/5mhuwAcA/js/app-back.js"
 }

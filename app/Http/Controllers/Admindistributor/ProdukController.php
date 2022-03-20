@@ -33,7 +33,7 @@ class ProdukController extends Controller
 			'nama_produk' 		=> 'required|unique:products',
 			'kategori_id'		=> 'required',
 			'deskripsi_produk'	=> 'required',
-			'foto_produk' 		=> 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+			'foto_produk' 		=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
 		]);
 		$produk 				= Product::create($request->all());
 		$produk->url_produk 	= Str::slug($request->nama_produk);
@@ -52,6 +52,14 @@ class ProdukController extends Controller
 		$qr->qr_code 	= $qrcodegenerator->encoding('UTF-8')->size(500)->generate(''.route('detail.produk',[$produk->id,$produk->url_produk]).'');
 		$qr->save();
 
+		return redirect()->back();
+	}
+
+	public function destroy($id){
+		$produk = Product::find($id);
+		unlink(public_path('foto_produk'.'/'.$produk->foto_produk));
+		$produk->delete();
+		QRCode::where('product_id',$id)->delete();
 		return redirect()->back();
 	}
 }
