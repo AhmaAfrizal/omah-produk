@@ -46,3 +46,14 @@ Route::middleware('is_adminverifikator')->namespace('AdminVerifikator')->prefix(
 
 Route::get('/kontributor', 'Superadmin\ProdusenController@index')->name('kontributor');
 Route::post('/kontributor', 'Superadmin\ProdusenController@input')->name('input.kontributor');
+
+Route::get('/', function () {
+    return view('/beranda');
+});
+//barang
+Route::get('/barang', 'BarangController@index');
+Route::get('/tambahbarang', 'BarangController@create');
+Route::post('/tambahbarang', 'BarangController@store');
+Route::get('/edit_barang/{id}', 'BarangController@edit');
+Route::post('/edit_barang/{id}', 'BarangController@update');
+Route::get('/hapus/{id}', 'BarangController@destroy');
