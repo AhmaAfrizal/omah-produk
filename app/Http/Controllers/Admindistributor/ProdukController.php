@@ -22,6 +22,8 @@ class ProdukController extends Controller
 		// dd($produk);
 		$kategori 	= Kategory::orderby('jenis_kategori','asc')->get();
 		return view('admindistributor.produk.index', compact('produk','kategori'));
+
+		// return view('frontend.home.', compact('produk','kategori'));
 	}
 
 	public function create(){
@@ -32,6 +34,11 @@ class ProdukController extends Controller
 		$request->validate([
 			'nama_produk' 		=> 'required|unique:products',
 			'kategori_id'		=> 'required',
+			'alamat'			=> 'required',
+			'pendiri'			=> 'required',
+			'berdiri_sejak'		=> 'required',
+			'situs_web'			=> 'required',
+			'sosial_media'		=> 'required',
 			'deskripsi_produk'	=> 'required',
 			'foto_produk' 		=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
 		]);
@@ -49,11 +56,56 @@ class ProdukController extends Controller
 		$qrcodegenerator= new Generator;
 		$qr 			= new QRCode;
 		$qr->product_id = $produkid;
-		$qr->qr_code 	= $qrcodegenerator->encoding('UTF-8')->size(500)->generate(''.route('detail.produk',[$produk->id,$produk->url_produk]).'');
+		$qr->qr_code 	= $qrcodegenerator->encoding('UTF-8')->size(200)->generate(''.route('detail.produk',[$produk->id,$produk->url_produk]).'');
 		$qr->save();
 
 		return redirect()->back();
 	}
+
+	public function edit($id)
+	{
+		$produk = Product::find($id);
+		return view('admindistributor.produk.edit', compact('produk'));
+	}
+	public function update(Request $request, $id)
+	{
+		$produk = Product::find($id);
+		$produk->nama_produk 			= $request->nama_produk;
+		$produk->alamat 				= $request->alamat;
+		$produk->pendiri				= $request->pendiri;
+		$produk->berdiri_sejak			= $request->berdiri_sejak;
+		$produk->situs_web				= $request->situs_web;
+		$produk->sosial_media			= $request->sosial_media;
+		$produk->deskripsi_produk 		= $request->deskripsi_produk;
+		$produk->save();
+
+		return redirect()->route('admindistributor.product.index');
+	}
+	// public function update(Request $request, $id)
+	// {
+	// 	$produk = Product::find($id);
+	// 	$request->validate([
+	// 		'nama_produk' 	=> 'required|unique:product',]);
+	// 	$produk->nama_produk 			= $request->nama_produk;
+	// 	$produk->url_jenis_kategori 	= Str::slug($request->nama_produk);
+	// 	$produk->deskripsi_produk 		= $request->deskripsi_produk;
+	// 	$produk->save();
+
+	// 	return redirect()->route('admindistributor.product.index');
+	// }
+
+	// public function update(Request $request, $id)
+	// {
+	// 	// $kategori = Kategory::find($id);
+	// 	// $request->validate([
+	// 	// 	'jenis_kategori' 	=> 'required|unique:kategories',Rule::unique('kategories')->ignore($kategori->id),
+	// 	// ]);
+	// 	// $kategori->jenis_kategori 		= $request->jenis_kategori;
+	// 	// $kategori->url_jenis_kategori 	= Str::slug($request->jenis_kategori);
+	// 	// $kategori->save();
+
+	// 	return redirect()->route('admindistributor.product.index');
+	// }
 
 	public function destroy($id){
 		$produk = Product::find($id);

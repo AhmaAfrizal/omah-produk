@@ -12,6 +12,10 @@
 					<div class="form-group">
 						<input type="text" name="jenis_kategori" class="form-control @error('jenis_kategori') is-invalid @enderror" placeholder="Jenis Kategori">
 
+						<div class="mt-3">
+							<input class="form-control form-control-sm" id="formFileSm" type="file">
+						</div>
+
 						@error('jenis_kategori')
 							<div class="valid-feedback">{{ $message }}</div>
 						@enderror

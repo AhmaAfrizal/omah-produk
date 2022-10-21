@@ -6,6 +6,7 @@
  
 <!-- membuat header dan tombol tambah produk di atas -->
 @section('header')
+    ini ada di dalam section header
     <center>
         <h2>Omah Produk</h2>
         <a href="/add"><button class="btn btn-danger">Tambah Produk</button></a>
@@ -14,6 +15,7 @@
  
 <!-- membuat komponen main yang berisi form untuk mengisi judul dan isi produk -->
 @section('main')
+    ini ada di dalam section main 
     @foreach ($articles as $data)
     <div class="col-md-4 col-sm-12 mt-4">
         <div class="card">

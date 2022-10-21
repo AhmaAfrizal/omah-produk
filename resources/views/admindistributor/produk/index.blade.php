@@ -29,6 +29,41 @@
 						@enderror
 					</div>
 					<div class="form-group">
+						<input type="text" name="alamat" class="form-control @error('alamat') is-invalid @enderror" placeholder="Alamat">
+
+						@error('alamat')
+							<div class="valid-feedback">{{ $message }}</div>
+						@enderror
+					</div>
+					<div class="form-group">
+						<input type="text" name="pendiri" class="form-control @error('pendiri') is-invalid @enderror" placeholder="Pendiri">
+
+						@error('pendiri')
+							<div class="valid-feedback">{{ $message }}</div>
+						@enderror
+					</div>
+					<div class="form-group">
+						<input type="date" name="berdiri_sejak" class="form-control @error('berdiri_sejak') is-invalid @enderror" placeholder="Berdiri sejak">
+
+						@error('berdiri_sejak')
+							<div class="valid-feedback">{{ $message }}</div>
+						@enderror
+					</div>
+					<div class="form-group">
+						<input type="text" name="situs_web" class="form-control @error('situs_web') is-invalid @enderror" placeholder="Situs Web">
+
+						@error('situs_web')
+							<div class="valid-feedback">{{ $message }}</div>
+						@enderror
+					</div>
+					<div class="form-group">
+						<input type="text" name="sosial_media" class="form-control @error('sosial_media') is-invalid @enderror" placeholder="Sosial Media">
+
+						@error('sosial_media')
+							<div class="valid-feedback">{{ $message }}</div>
+						@enderror
+					</div>
+					<div class="form-group">
 						<textarea name="deskripsi_produk" id="deskripsi_produk" rows="3" class="form-control @error('deskripsi_produk') is-invalid @enderror" placeholder="Deskripsi Produk"></textarea>
 
 						@error('deskripsi_produk')

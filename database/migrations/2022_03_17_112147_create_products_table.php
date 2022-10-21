@@ -18,6 +18,11 @@ class CreateProductsTable extends Migration
 			$table->string('nama_produk')->nullable();
 			$table->string('url_produk')->nullable();
 			$table->integer('kategori_id')->nullable();
+			$table->text('alamat')->nullable();
+			$table->string('pendiri')->nullable();
+			$table->date('berdiri_sejak')->nullable();
+			$table->string('situs_web')->nullable();
+			$table->string('sosial_media')->nullable();
 			$table->text('deskripsi_produk')->nullable();
 			$table->text('foto_produk')->nullable();
 			$table->timestamps();
@@ -47,6 +52,6 @@ class CreateProductsTable extends Migration
 		Schema::dropIfExists('kategories');
 		Schema::dropIfExists('qrcodes');
 		// setelah di php artisan migrate dibawah ini dihapus ya
-		Schema::dropIfExists('produk');
+		// Schema::dropIfExists('produk');
 	}
 }

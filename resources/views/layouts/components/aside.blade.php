@@ -17,17 +17,36 @@
 					<li class="nav-item">
 						<a class="nav-link {{ Request::routeIs('superadmin.home') ? 'active' : '' }}" href="{{ route('superadmin.home') }}">
 							<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-								<i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+								<i class="ni ni-world text-primary text-sm opacity-10"></i>
 							</div>
 							<span class="nav-link-text ms-1">Dashboard</span>
 						</a>
 					</li>
-					<li class="nav-item">
+					{{-- <li class="nav-item">
 						<a class="nav-link {{ Request::routeIs('superadmin.admin_verifikator.index') ? 'active' : '' }}" href="{{ route('superadmin.admin_verifikator.index') }}">
 							<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
 								<i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
 							</div>
 							<span class="nav-link-text ms-1">Admin Verifikator</span>
+						</a>
+					</li> --}}
+					<li class="nav-item">
+						<a class="nav-link {{ Request::routeIs('superadmin.admin_dis.index') ? 'active' : '' }}" href="{{ route('superadmin.admin_dis.index') }}">
+							<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+								<i class="ni ni-circle-08 text-primary text-sm opacity-10"></i>
+							</div>
+							<span class="nav-link-text ms-1">Admin Distributor</span>
+						</a>
+					</li>
+					<li class="nav-item mt-3">
+						<h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Other pages</h6>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link {{ Request::routeIs('superadmin.User.index') ? 'active' : '' }}" href="{{ route('superadmin.User.index') }}">
+							<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+								<i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+							</div>
+							<span class="nav-link-text ms-1">User account</span>
 						</a>
 					</li>
 				@elseif(auth()->user()->is_adminverifikator == 1)
@@ -36,7 +55,8 @@
 					<li class="nav-item">
 						<a class="nav-link {{ Request::routeIs('admindistributor.home') ? 'active' : '' }}" href="{{ route('admindistributor.home') }}">
 							<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-								<i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+								<i class="ni ni-world text-primary text-sm opacity-10"></i>
+								{{-- <i class="fa-regular fa-gauge"></i> --}}
 							</div>
 							<span class="nav-link-text ms-1">Dashboard</span>
 						</a>
@@ -44,7 +64,7 @@
 					<li class="nav-item">
 						<a class="nav-link {{ Request::routeIs('admindistributor.product.index') ? 'active' : '' }}" href="{{ route('admindistributor.product.index') }}">
 							<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-								<i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+								<i class="ni ni-briefcase-24 text-primary text-sm opacity-10"></i>
 							</div>
 							<span class="nav-link-text ms-1">Produk</span>
 						</a>
@@ -52,56 +72,63 @@
 					<li class="nav-item">
 						<a class="nav-link {{ Request::routeIs('admindistributor.kategories.index') ? 'active' : '' }}" href="{{ route('admindistributor.kategories.index') }}">
 							<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-								<i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+								<i class="ni ni-bag-17 text-primary text-sm opacity-10"></i>
 							</div>
 							<span class="nav-link-text ms-1">Kategori</span>
 						</a>
 					</li>
+				@elseif(auth()->user())
+				<li class="nav-item">
+					<a class="nav-link {{ Request::routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">
+						<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+							<i class="ni ni-world text-primary text-sm opacity-10"></i>
+							{{-- <i class="fa-regular fa-gauge"></i> --}}
+						</div>
+						<span class="nav-link-text ms-1">Dashboard</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {{ Request::routeIs('product.index') ? 'active' : '' }}" href="{{ route('product.index') }}">
+						<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+							<i class="ni ni-briefcase-24 text-primary text-sm opacity-10"></i>
+						</div>
+						<span class="nav-link-text ms-1">Produk</span>
+					</a>
+				</li>
 				@endif
 			@endguest
-			<li class="nav-item">
+			{{-- <li class="nav-item">
 				<a class="nav-link " href="./pages/tables.html">
 					<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
 						<i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
 					</div>
 					<span class="nav-link-text ms-1">Tables</span>
 				</a>
-			</li>
-			<li class="nav-item">
+			</li> --}}
+			{{-- <li class="nav-item">
 				<a class="nav-link " href="./pages/billing.html">
 					<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
 						<i class="ni ni-credit-card text-success text-sm opacity-10"></i>
 					</div>
 					<span class="nav-link-text ms-1">Billing</span>
 				</a>
-			</li>
-			<li class="nav-item">
+			</li> --}}
+			{{-- <li class="nav-item">
 				<a class="nav-link " href="./pages/virtual-reality.html">
 					<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
 						<i class="ni ni-app text-info text-sm opacity-10"></i>
 					</div>
 					<span class="nav-link-text ms-1">Virtual Reality</span>
 				</a>
-			</li>
-			<li class="nav-item">
+			</li> --}}
+			{{-- <li class="nav-item">
 				<a class="nav-link " href="./pages/rtl.html">
 					<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
 						<i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
 					</div>
 					<span class="nav-link-text ms-1">RTL</span>
 				</a>
-			</li>
-			<li class="nav-item mt-3">
-				<h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link " href="./pages/profile.html">
-					<div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-						<i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
-					</div>
-					<span class="nav-link-text ms-1">Profile</span>
-				</a>
-			</li>
+			</li> --}}
 		</ul>
 	</div>
 	<div class="sidenav-footer mx-3 ">

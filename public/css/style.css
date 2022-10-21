@@ -1,0 +1,875 @@
+/* {{-- ini adalah css untuk navbar --}} */
+.form-control {
+    border-radius: 30px;
+    border-color: #54defd;
+  }
+  
+  .from{
+    width: 430px;
+  }
+  @media screen and (max-width:991px) {
+    .from{
+      width: 100%;
+    }
+  }
+  .btn {
+    border-radius: 40px;
+  }
+  .navbar {
+    position: absolute;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+  }
+  a.menu:after, .dropdown-toggle:after {
+    content: none;
+  }
+/* akhir css untuk navbar */
+
+
+
+
+
+
+
+
+/* ini adalah css untuk home */
+  .kartu:hover{
+    /* bottom: 20px;
+    padding-bottom: 200px; */
+    background-color:#F3F3F3;
+  }
+
+  .kater{
+    border-radius: 20px;
+  }
+
+  .kater:hover{
+    background-color:#F3F3F3;
+   }
+
+ .scrollmenu {
+   display: flex;
+   overflow-x: scroll;
+   padding-bottom:10px;
+ }
+
+ ::-webkit-scrollbar {
+   width: 0px;
+ }
+
+ .ratings{
+     margin:10px 0px 10px 15px;
+   }
+
+ .checked {
+     color: orange;
+   }
+
+   .kater-font{
+    font-weight:700;
+  }
+
+   /* .card{
+     border-radius: 20px;
+   } */
+
+   /* xl screen */
+   @media screen and (min-width:1367px) {
+     .crsl-in{
+      border-radius: 20px;
+     }
+
+   .kat{
+   margin-left: 10px;
+   }
+   .kat .gmbr{
+   height: 235px;
+   }
+
+   .kater{
+    height: 220px;
+    width:  220px;
+   }
+
+   .kater-gam{
+     align-self: center;
+     margin-top: 10px;
+     width: 120px;
+     /* height: 130px; */
+   }
+
+   /* <ini adalah untuk font> */
+    .kater-font{
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight:700;
+    }
+   /* </penurtup font> */
+
+   .item{
+   width: 400px;
+   height: 530px;
+   margin: 7px;
+   }
+
+   .kartu{
+    height: 500px;
+    border-radius: 20px;
+    }
+
+    .gam{
+     border-radius: 20px;
+     height: 230px;
+   }
+   .card-body h5{
+     margin-bottom: 15px;
+   }
+   }
+
+   /* lg screen */
+   @media screen and (min-width:1141px) and (max-width:1366px) {
+     .crsl-in{
+      border-radius: 20px;
+     }
+
+     .kat{
+   margin-left: 10px;
+   }
+   /* .kat .gmbr{
+   height: 190px;
+   } */
+
+   .kater{
+    height: 190px;
+    width: 190px;
+   }
+
+   .kater-gam{
+     align-self: center;
+     width: 110px;
+     height: 110px;
+   }
+
+   /* ini adalah untuk font */
+   .kater-font{
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight:700;
+  }
+   /* penutup font */
+
+     .item{
+     width: 350px;
+     height: 460px;
+     margin: 5px;
+     font-size: 14px;
+     }
+
+   .kartu{
+    height: 440px;
+    border-radius: 20px;
+    }
+
+    .gam{
+     border-radius: 20px;
+     height: 210px;
+   }
+
+   .card-body h5{
+     margin-bottom: 15px;
+   }
+   }
+   
+
+   /* inspect 1 screen */
+   @media screen and (min-width:992px) and (max-width:1140px) {
+     .crsl-in{
+      border-radius: 15px;
+     }
+
+   .kat{
+   margin-left: 7px;
+   }
+   .kat .gmbr{
+   height: 150px;
+   }
+
+   .kater{
+    height: 160px;
+    width: 160px;
+   }
+
+   .kater-gam{
+     align-self: center;
+     width: 80px;
+     height: 80px;
+   }
+
+   /* ini adalah untuk font */
+   .kater-font{
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight:700;
+  }
+   /* penutup font */
+
+   .item{
+   width: 280px;
+   height: 400px;
+   margin: 5px;
+   font-size: 12px;
+   }
+
+   .kartu{
+    height: 370px;
+    border-radius: 15px;
+    }
+
+    .gam{
+     border-radius: 15px;
+     height: 160px;
+   }
+
+   .card-body h5{
+     font-size: 16px;
+     margin-bottom: 13px;
+   }
+   }
+
+   /* inspect 2 screen */
+   @media screen and (min-width:768px) and (max-width:991px) {
+     .crsl-in{
+      border-radius: 9px;
+     }
+
+     .kat{
+   margin-left: 7px;
+   }
+   .kat .gmbr{
+   height: 140px;
+   }
+
+   .kater{
+    border-radius: 9px;
+    height: 130px;
+    width: 130px;
+   }
+
+   .kater-gam{
+     align-self: center;
+     width: 60px;
+     height: 60px;
+   }
+
+   /* ini adalah untuk font */
+   .kater-font{
+    margin-top: 13px;
+    font-size: 12px;
+    font-weight:700;
+  }
+   /* penutup font */
+
+   .item{
+   width: 220px;
+   height: 300px;
+   padding: 1px;
+   margin: 4px;
+   font-size: 8px;
+   }
+
+   .kartu{
+    height: 280px;
+    border-radius: 15px;
+    }
+
+    .gam{
+     border-radius: 15px;
+     height: 130px;
+   }
+
+   .card-body h5{
+     font-size: 12px;
+     margin-bottom: 10px;
+   }
+   }
+
+   /* inspect 3 screen */
+   @media screen and (min-width:576px) and (max-width:767px) {
+     .crsl-in{
+      border-radius: 9px;
+     }
+
+     .kat{
+   margin-left: 7px;
+   }
+   .kat .gmbr{
+   height: 130px;
+   }
+
+   .kater{
+    border-radius: 9px;
+    height: 90px;
+    width: 90px;
+   }
+
+   .kater-gam{
+     align-self: center;
+     width: 40px;
+     height: 40px;
+   }
+
+   /* ini adalah untuk font */
+   .kater-font{
+    margin-top: 5px;
+    font-size: 8px;
+    font-weight:700;
+  }
+   /* penutup font */
+
+   .item{
+   width: 160px;
+   height: 240px;
+   margin: 3px;
+   font-size: 6px;
+   }
+   .kartu{
+    height: 230px;
+    border-radius: 9px;
+    }
+
+    .gam{
+     border-radius: 9px;
+     height: 80px;
+   }
+   .card-body h5{
+     font-size: 9px;
+     margin-bottom: 9px;
+   }
+   }
+
+   /* ini adalah inspect mobile */
+   @media screen and (max-width:575px) {
+     .crsl-in{
+      border-radius: 9px;
+     }
+
+     .kat{
+   margin-left: 4px;
+   }
+   .kat .gmbr{
+   height: 105px;
+   }
+
+   .kater{
+    border-radius: 9px;
+    height: 90px;
+    width: 90px;
+   }
+
+   .kater-gam{
+     align-self: center;
+     width: 40px;
+     height: 40px;
+   }
+
+   /* ini adalah untuk font */
+   .kater-font{
+    margin-top: 5px;
+    font-size: 8px;
+    font-weight:700;
+  }
+
+     .item{
+     width: 160px;
+     height: 240px;
+     margin: 3px;
+     font-size: 6px;
+   }
+   
+   .kartu{
+    height: 230px;
+    border-radius: 7px;
+    }
+
+    .gam{
+     border-radius: 7px;
+     height: 80px;
+   }
+
+   .card-body h5{
+     font-size: 9px;
+     margin-bottom: 9px;
+   }
+   }
+
+   /* iki ngko dadi pr e :v */
+   .explore{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     margin:0px;
+   }
+
+   .card-img-top{
+     left: 4.53%;
+     right: 5.49%;
+   }
+
+   .dekorasi{
+     border: 4px solid;
+     color: #00BD9D;
+     width:78px;
+     margin-left:50px;
+     margin-top:0px;
+     border-radius: 30px;
+   }
+/* akhir css untuk view produk */
+
+
+
+
+
+
+
+
+/* ini adalah css untuk viewproduk */
+* {
+margin: 0;
+padding: 0;
+}
+
+
+/* xl screen */
+@media screen and (min-width:1367px) {
+.atas {
+display: flex;
+justify-content: left;
+align-items: center;
+flex-wrap: wrap;
+margin-left: 20px;
+}
+
+.img-produk {
+  border-radius: 20px;
+  width: 440px;
+  height: 430px;
+}
+
+.qrcode {
+padding: 50px 10px 20px 10px;
+width: 140px;
+margin-left: 150px;
+}
+.qrcode p .link-dark{
+font-size: 17px;
+}
+
+.details {
+width: 500px;
+padding-left: 20px;
+}
+
+.judul{
+font-size: 21px;
+}
+.detil{
+font-size: 20px;
+}
+
+.rate {
+float: left;
+height: 46px;
+padding: 0 10px;
+}
+
+.rate:not(:checked) > label {
+float: right;
+width: 1em;
+overflow: hidden;
+white-space: nowrap;
+cursor: pointer;
+font-size: 35px;
+color: #ccc;
+}
+.vote{
+font-size: 20px;
+}
+.link{
+font-size: 14px;
+}
+}
+
+/* lg screen */
+@media screen and (min-width:1141px) and (max-width:1366px) {
+.atas{
+display: flex;
+justify-content: left;
+align-items: center;
+flex-wrap: wrap;
+margin:0px;
+}
+
+.img-produk {
+border-radius: 20px;
+width: 400px;
+height: 380px;
+}
+
+.qrcode {
+width: 140px;
+margin-left: 150px;
+justify-self: right;
+}
+.qrcode .caps{
+font-size: 17px;
+}
+
+.details {
+width: 400px;
+margin-left: 10px;
+}
+
+.judul{
+font-size: 18px;
+}
+.detil{
+font-size: 17px;
+}
+
+.rate {
+float: left;
+height: 46px;
+padding: 0 10px;
+}
+
+.rate:not(:checked) > label {
+float: right;
+width: 1em;
+overflow: hidden;
+white-space: nowrap;
+cursor: pointer;
+font-size: 30px;
+color: #ccc;
+}
+.vote{
+font-size: 17px;
+}
+
+.desk p{
+font-size: 17px;
+}
+
+.link{
+font-size: 17px;
+}
+}
+
+/* inspect 1 screen */
+@media screen and (min-width:992px) and (max-width:1140px) {
+.atas{
+display: flex;
+justify-content: left;
+align-items: center;
+flex-wrap: wrap;
+margin:0px;
+}
+
+.img-produk {
+  border-radius: 18px;
+  width: 320px;
+  height: 320px;
+  }
+
+.qrcode {
+width: 140px;
+justify-self: right;
+}
+.qrcode .caps{
+font-size: 14px;
+}
+
+.details {
+width: 400px;
+margin-left: 8px;
+}
+
+.judul h2{
+font-size: 22px;
+}
+.detil{
+font-size: 13px;
+}
+
+.rate {
+float: left;
+height: 40px;
+padding: 0 10px;
+font-size: 25px;
+}
+
+.rate:not(:checked) > label {
+float: right;
+width: 1em;
+overflow: hidden;
+white-space: nowrap;
+cursor: pointer;
+font-size: 22px;
+color: #ccc;
+}
+.vote{
+font-size: 12px;
+}
+
+.desk p{
+font-size: 14px;
+}
+.link{
+font-size: 14px;
+}
+}
+
+/* inspect 2 screen */
+@media screen and (min-width:768px) and (max-width:991px) {
+.atas{
+display: flex;
+justify-content: left;
+align-items: center;
+flex-wrap: wrap;
+margin:0px;
+}
+
+.img-produk {
+  border-radius: 15px;
+  width: 280px;
+  height: 280px;
+  }
+
+.qrcode {
+width: 110px;
+margin-top: 10px;
+justify-self: right;
+}
+.qrcode p{
+font-size: 10px;
+}
+
+.details {
+width: 400px;
+margin-left: 16px;
+}
+
+.judul h2{
+font-size: 21px;
+}
+.detil{
+font-size: 12px;
+}
+
+.rate {
+float: left;
+height: 40px;
+padding: 0 10px;
+font-size: 25px;
+}
+
+.rate:not(:checked) > label {
+float: right;
+width: 1em;
+overflow: hidden;
+white-space: nowrap;
+cursor: pointer;
+font-size: 20px;
+color: #ccc;
+}
+.vote{
+font-size: 12px;
+}
+
+.desk p{
+font-size: 13px;
+}
+.link{
+font-size: 13px;
+}
+}
+
+/* inspect 3 screen */
+@media screen and (min-width:576px) and (max-width:767px) {
+.atas{
+display: flex;
+justify-content: left;
+align-items: center;
+flex-wrap: wrap;
+margin:0px;
+}
+
+.img-produk {
+  border-radius: 12px;
+  width: 250px;
+  height: 250px;
+  }
+
+.qrcode {
+width: 50px;
+justify-self: right;
+}
+.qrcode p{
+font-size: 10px;
+}
+
+.details {
+width: 260px;
+margin-left: 5px;
+}
+
+.judul h2{
+font-size: 19px;
+}
+.detil{
+font-size: 11px;
+}
+
+.rate {
+float: left;
+height: 40px;
+padding: 0 10px;
+font-size: 24px;
+}
+
+.rate:not(:checked) > label {
+float: right;
+width: 1em;
+overflow: hidden;
+white-space: nowrap;
+cursor: pointer;
+font-size: 19px;
+color: #ccc;
+}
+.vote{
+font-size: 12px;
+}
+
+.desk p{
+font-size: 13px;
+}
+.link{
+font-size: 13px;
+}
+}
+
+/* ini adalah inspect mobile */
+@media screen and (max-width:575px) {
+.atas{
+display: flex;
+justify-content: left;
+align-items: center;
+flex-wrap: wrap;
+margin:0px;
+}
+
+.img-produk {
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  }
+
+.qrcode {
+width: 100px;
+padding: 20px 10px 20px 10px;
+justify-self: right;
+}
+.qrcode p{
+font-size: 10px;
+}
+
+.details {
+width: 260px;
+margin-top: 15px;
+}
+
+.judul h2{
+font-size: 19px;
+}
+.detil{
+font-size: 11px;
+}
+
+.rate {
+float: left;
+height: 40px;
+padding: 0 10px;
+font-size: 24px;
+}
+
+.rate:not(:checked) > label {
+float: right;
+width: 1em;
+overflow: hidden;
+white-space: nowrap;
+cursor: pointer;
+font-size: 19px;
+color: #ccc;
+}
+.vote{
+font-size: 11px;
+}
+
+.desk p{
+font-size: 13px;
+}
+.link{
+font-size: 13px;
+}
+}
+
+.rate:not(:checked) > input {
+position: absolute;
+top: -9999px;
+}
+
+.rate:not(:checked) > label {
+float: right;
+width: 1em;
+overflow: hidden;
+white-space: nowrap;
+cursor: pointer;
+color: #ccc;
+}
+
+.rate:not(:checked) > label:before {
+content: "★ ";
+}
+.rate > input:checked ~ label {
+color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+color: #c59b08;
+}
+
+.tautan:hover {
+color: #00bd9d;
+}
+
+/* ini adalah css untuk modal tambah ulasan */
+.modal-body .form-control{
+border: none;
+}
+.modal-body .form-control:focus {
+border: none;
+outline: none;
+box-shadow: none;
+}
+.modal-footer .btn{
+border: none;
+}
+/* akhir css untuk view produk */
